@@ -1,11 +1,13 @@
 import pygame
 
+import settings
+
 if __name__ == "__main__":
     # Initialize Pygame
     pygame.init()
 
     # Intiate the screen with the given width and height
-    screen = pygame.display.set_mode([600, 400])
+    screen = pygame.display.set_mode([screenWidth, screenHeight])
 
     # Create the appropriate groupings of the sprites
     allSpritesGroup = pygame.sprite.Group()
@@ -27,7 +29,7 @@ if __name__ == "__main__":
         allSpritesGroup.update()
 
         # Clear the screen
-        screen.fill((28, 157, 255))
+        screen.fill(backgroundColour)
 
         # Draw all the sprites
         allSpritesGroup.draw(screen)
